@@ -1,0 +1,51 @@
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" 
+	version="6.0"
+	metadata-complete="false">
+	
+  <display-name>BradJavaEE</display-name>
+  <welcome-file-list>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>	
+	
+	<!-- 全局初始化參數 -->
+	<context-param>
+	    <param-name>x</param-name>
+	    <param-value>10</param-value>
+	</context-param>
+	
+	<context-param>
+	    <param-name>y</param-name>
+	    <param-value>3</param-value>
+	</context-param>
+    	
+	
+  <servlet>
+    <description></description>
+    <display-name>Brad022</display-name>
+    <servlet-name>Brad0222</servlet-name>
+    <servlet-class>tw.brad.tutor.Brad02</servlet-class>
+    
+    <!-- 定義初始化參數 -->
+	<init-param>
+	    <param-name>companyName</param-name>
+	    <param-value>Brad Big Company</param-value>
+	</init-param>    
+	<init-param>
+	    <param-name>myName</param-name>
+	    <param-value>Brad Chao</param-value>
+	</init-param>    
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Brad0222</servlet-name>
+    <url-pattern>/Brad022</url-pattern>
+  </servlet-mapping>	
+</web-app>	
